@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SurplusEnergyAvailable v1",
+  "type": "object",
+  "required": ["eventType", "version", "meterId", "interval", "surplusKWh"],
+  "properties": {
+    "eventType": {"const": "SurplusEnergyAvailable"},
+    "version": {"const": 1},
+    "meterId": {"type": "string"},
+    "interval": {"type": "string"},
+    "surplusKWh": {"type": "number", "minimum": 0}
+  }
+}
